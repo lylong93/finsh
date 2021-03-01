@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "node ./src/server/app.js",
-    "dev": "nodemon ./src/server/app.js",
+    "server": "nodemon ./src/server/server.js",
+    "serverdev": "webpack --config config/server.config.js",
+    "clientdev": "webpack --config config/client.config.js",
     "build": "webpack"
   },
   "author": "",
@@ -18,7 +19,8 @@
     "vue-loader": "^15.9.6",
     "vue-server-renderer": "^2.6.12",
     "vue-template-compiler": "^2.6.12",
-    "webpack": "^5.24.2"
+    "webpack": "^5.24.2",
+    "webpack-node-externals": "^2.5.2"
   },
   "devDependencies": {
     "webpack-cli": "^4.5.0"
