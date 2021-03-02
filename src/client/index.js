@@ -1,19 +1,16 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from 'vue';
+import App from './App.vue';
 
-// export function createApp () {
-    // const app = new Vue({
-    //   // 根实例简单的渲染应用程序组件。
-    //   render: h => h(App)
-    // })
+// import store from './store';
 
-    const app = new Vue({
-      data: {
-          url: 'www.baidu.com'
-        },      
-      template: `<div>访问的 URL 是： {{ url }}</div>`,
-  })
-    // return { app }
+Vue.config.productionTip = false;
 
-    export default app
-//   }
+export function createApp(context) {
+  const app = new Vue({
+  
+    context,
+    // store,
+    render: h => h(App)
+  });
+  return { app };
+}
